@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Undangan Pernikahan</title>
+
+<style>
+body{
+    font-family: Arial, sans-serif;
+    margin:0;
+    padding:0;
+    text-align:center;
+    background:#fdf6f0;
+}
+
+.hero{
+    padding:60px 20px;
+    background:#fff;
+}
+
+h1{
+    color:#b76e79;
+}
+
+.card{
+    margin:20px;
+    padding:20px;
+    background:white;
+    border-radius:15px;
+    box-shadow:0 0 10px rgba(0,0,0,.1);
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 20px;
+    background:#b76e79;
+    color:white;
+    text-decoration:none;
+    border-radius:10px;
+}
+</style>
+</head>
+<body>
+
+<div class="hero">
+    <h3>Kepada Yth.</h3>
+    <h2 id="tamu">Tamu Undangan</h2>
+
+    <p>Undangan Pernikahan</p>
+
+    <h1>Alfia & Bima</h1>
+
+    <p>Minggu, 20 Desember 2026</p>
+</div>
+
+<div class="card">
+    <h2>Assalamu'alaikum Wr. Wb.</h2>
+
+    <p>
+        Dengan memohon rahmat Allah SWT,
+        kami mengundang Bapak/Ibu/Saudara/i
+        untuk hadir dalam acara pernikahan kami.
+    </p>
+</div>
+
+<div class="card">
+    <h2>Lokasi Acara</h2>
+
+    <p>
+        Gedung Serbaguna Bahagia
+        <br>
+        Surabaya
+    </p>
+
+    <a class="btn"
+       href="https://maps.google.com"
+       target="_blank">
+       Buka Maps
+    </a>
+</div>
+
+<div class="card">
+    <h2>Terima Kasih</h2>
+    <p>Merupakan suatu kehormatan bagi kami atas kehadiran dan doa restunya.</p>
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const nama = params.get('to');
+
+if(nama){
+  document.getElementById('tamu').innerText =
+    decodeURIComponent(nama.replace(/\+/g,' '));
+}
+</script>
+
+</body>
+</html>
